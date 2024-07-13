@@ -89,7 +89,7 @@ public class Pagefactory {
 	public Pagefactory(WebDriver driver) {
 		this.driver = driver;
 		this.actions = new Actions(driver);
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		PageFactory.initElements(driver, this);
 	}
 	

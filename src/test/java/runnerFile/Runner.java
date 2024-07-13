@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 	features = "src/test/resources/Feature",
 	glue = "stepDefinitions",
 	plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json"},
-	monochrome = true
+	monochrome = true//, dryRun = true //: FOR HEADLESS BROWSERS
 )
 
 public class Runner extends AbstractTestNGCucumberTests{

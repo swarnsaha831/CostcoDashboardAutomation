@@ -14,12 +14,13 @@ public class BasePage {
 	public static String browserChoice;
 	public static String search;
 	
+	// DRIVER CAN ALSO BE TAKEN AS A PARAMETER IN THE METHOD
 	public static WebDriver getDriver() {
 		WebDriver driver = null;
 		System.out.println("\nHello, welcome to your QA Testing environment, please enter a broswer.\n"
 						 + "Your choices are: 1 for (chrome), 2 for (edge), and 3 for (firefox), please enter as specified:\n");
 		do {
-		    browserChoice = scanner.nextLine().toLowerCase();
+		    browserChoice = scanner.nextLine().replaceAll(" ", "");
 		    if (!browserChoice.equals("1") && !browserChoice.equals("2") && !browserChoice.equals("3")) {
 		        System.out.println("Entered browser choice isn't supported or is spelled incorrectly. Please try again:\n");
 		    }
